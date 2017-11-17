@@ -5,13 +5,12 @@ import "fmt"
 func main() {
 	goku := &Sayan{
 		Person: &Person{"Goku"},
-		Power: 14000,
+		Power:  14000,
 		Friends: map[string]*Sayan{
 			"Krillin": {&Person{"Krillin"}, 3000, nil},
 			"Vegheta": {&Person{"Vegheta"}, 7000, nil},
 		},
 	}
-
 
 	goku.Super()
 	fmt.Printf("Power of %s is %d\n", goku.Person.Name, goku.Power)
@@ -26,7 +25,7 @@ type Person struct {
 
 type Sayan struct {
 	*Person
-	Power int
+	Power   int
 	Friends map[string]*Sayan
 }
 
