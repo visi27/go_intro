@@ -7,10 +7,10 @@ import (
 type Add func(a int, b int) int
 
 func main() {
-	fmt.Println(process(func(a int, b int) int {
+	fmt.Println(exec(func(a int, b int) int {
 		return a + b
 	}))
 }
-func process(adder Add) int {
+func exec(adder Add) int {
 	return adder(1, 2)
 }
