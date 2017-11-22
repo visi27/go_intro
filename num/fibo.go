@@ -5,7 +5,7 @@ import "fmt"
 func PrintFibo (n int) {
 	f1, f2 := 1, 1
 	var tmp int;
-	fmt.Printf("%d %d ", f1, f2)
+	fmt.Printf("Fibo sequence of %d numbers is %d %d ", n, f1, f2)
 
 	for i :=3; i<=n; i++ {
 		tmp = f1 + f2
