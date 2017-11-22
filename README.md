@@ -1,0 +1,1 @@
+Implementing https://github.com/karan/Projects as a way to learn GO
