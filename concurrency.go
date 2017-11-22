@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"time"
 	"math/rand"
+	"time"
 )
 
 type Worker struct {
@@ -12,19 +12,19 @@ type Worker struct {
 
 func main() {
 	c := make(chan int)
-	for i:=0; i < 4; i++ {
+	for i := 0; i < 4; i++ {
 		worker := Worker{id: i}
 		go worker.process(c)
 	}
 
-	for i:=0; i < 2000; i++{
+	for i := 0; i < 2000; i++ {
 		select {
 		case c <- rand.Int():
 			fmt.Println("RECEIVED")
 		case <-time.After(time.Millisecond * 50):
 			fmt.Println("timed out *********************************************************************")
-		//default:
-		//	fmt.Println("DROPPED")
+			//default:
+			//	fmt.Println("DROPPED")
 		}
 
 		//fmt.Printf("Buffer length %d\n", len(c))
