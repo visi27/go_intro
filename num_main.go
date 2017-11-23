@@ -13,4 +13,15 @@ func main() {
 	precision := 10
 	fmt.Printf("Calculated PI value for precicion %d is %g\n", precision, num.CalculatePi(precision))
 	fmt.Printf("Calculated e value for precicion %d is %g\n", precision, num.CalculateE(precision))
+
+	fmt.Println(num.GetNextPrime(400))
+
+	for{
+		fmt.Println("What number do you want primal ficators calculated for (0: exit):")
+		fmt.Scanf("%d", &n)
+		if n==0 {
+			break
+		}
+		num.PrintPrimalFactors(n)
+	}
 }
