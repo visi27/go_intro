@@ -17,11 +17,13 @@ func main() {
 	fmt.Println(num.GetNextPrime(400))
 
 	for{
-		fmt.Println("What number do you want primal ficators calculated for (0: exit):")
+		fmt.Println("What number do you want primal facators calculated for (0: exit):")
 		fmt.Scanf("%d", &n)
 		if n==0 {
 			break
 		}
 		num.PrintPrimalFactors(n)
+
+		fmt.Printf("\n Also the factorial of %d is %d\n", n, num.CalculateFactorial(n))
 	}
 }
